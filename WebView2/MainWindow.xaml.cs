@@ -24,7 +24,6 @@ namespace WebView2
         public MainWindow()
         {
             InitializeComponent();
-            Microsoft.Web.WebView2.Wpf.WebView2 NewWebView = new();
             string UserDataFolder;
             UserDataFolder = Environment.GetEnvironmentVariable("APPDATA") + "\\CAV";
             var env = CoreWebView2Environment.CreateAsync(null,
@@ -39,7 +38,6 @@ namespace WebView2
         private void WebViewInitiliazed(object? sender, CoreWebView2InitializationCompletedEventArgs e)
         {
             string path = webView.CoreWebView2.Environment.UserDataFolder;
-            string toto = "jklj";
         }
 
     }
